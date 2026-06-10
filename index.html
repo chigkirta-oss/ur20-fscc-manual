@@ -7,61 +7,19 @@
 </head>
 <body style="margin: 0; padding: 0; background-color: #fafafa; font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; line-height: 1.6;">
 
-    <header style="background-color: #ffaa00; color: #111; padding: 15px 20px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
-        <h1 style="margin: 0; font-size: 20px;">UR20-XXX 簡易接続マニュアル</h1>
-        
-        <nav style="margin-top: 15px; display: flex; justify-content: center; gap: 15px;">
-            
-            <div class="dropdown" style="position: relative; display: inline-block;">
-                <button style="background-color: #ffffff; border: none; font-size: 13px; font-weight: bold; color: #111; cursor: pointer; padding: 8px 16px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 4px;">
-                    三菱PLC マニュアル一覧 <span style="font-size: 10px; color: #666;">▼</span>
-                </button>
-                <div class="dropdown-content" style="display: none; position: absolute; left: 50%; transform: translateX(-50%); min-width: 180px; z-index: 1001; padding-top: 8px;">
-                    <div style="background-color: #ffffff; box-shadow: 0px 8px 16px rgba(0,0,0,0.15); border-radius: 4px; overflow: hidden;">
-                        <a href="https://chigkirta-oss.github.io/ur20-fscc-manual/" style="color: #333; padding: 12px 16px; text-decoration: none; display: block; font-size: 13px; text-align: left; border-bottom: 1px solid #eee;">CC-Link IE TSN編</a>
-                        <a href="https://chigkirta-oss.github.io/ur20-eip-manual/" style="color: #333; padding: 12px 16px; text-decoration: none; display: block; font-size: 13px; text-align: left;">EtherNet/IP編</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dropdown" style="position: relative; display: inline-block;">
-                <button style="background-color: #ffffff; border: none; font-size: 13px; font-weight: bold; color: #111; cursor: pointer; padding: 8px 16px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 4px;">
-                    キーエンスPLC マニュアル一覧 <span style="font-size: 10px; color: #666;">▼</span>
-                </button>
-                <div class="dropdown-content" style="display: none; position: absolute; left: 50%; transform: translateX(-50%); min-width: 180px; z-index: 1001; padding-top: 8px;">
-                    <div style="background-color: #ffffff; box-shadow: 0px 8px 16px rgba(0,0,0,0.15); border-radius: 4px; overflow: hidden;">
-                        <a href="#" style="color: #333; padding: 12px 16px; text-decoration: none; display: block; font-size: 13px; text-align: left; border-bottom: 1px solid #eee;">KV-XX00 EtherNet/IP編</a>
-                        <a href="#" style="color: #333; padding: 12px 16px; text-decoration: none; display: block; font-size: 13px; text-align: left;">PROFINET編</a>
-                    </div>
-                </div>
-            </div>
-
-        </nav>
-
-        <style>
-            /* マウスが乗ったらドロップダウンを表示 */
-            .dropdown:hover .dropdown-content {
-                display: block !important;
-            }
-            /* メニュー内のリンクにマウスが乗ったときの変化 */
-            .dropdown-content a:hover {
-                background-color: #f5f5f5;
-                color: #ffaa00 !important;
-            }
-        </style>
-    </header>
+    <div id="shared-header"></div>
 
     <main style="max-width: 800px; margin: 30px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
         
         <section style="margin-bottom: 40px; border-left: 4px solid #ffaa00; padding-left: 15px;">
             <h2 style="margin-top: 0; color: #111; font-size: 18px;">1. システム構成概要</h2>
-            <p>本マニュアルは、三菱電機製PLC（CC-Link IE TSNマスター）と、ワイドミュラー製リモートI/Oシステム「u-remote」（UR20-XXX-PN-FSCC）を接続し、データ通信を行うための初期設定手順です。</p>
+            <p>本マニュアルは、三菱電機製PLC（CC-Link IE TSNマスター） and ワイドミュラー製リモートI/Oシステム「u-remote」（UR20-XXX-PN-FSCC）を接続し、データ通信を行うための初期設定手順です。</p>
         </section>
 
         <section style="margin-bottom: 40px;">
             <h3 style="color: #444; font-size: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">【システム構成図】</h3>
             <div style="background-color: #f0f0f0; padding: 20px; text-align: center; border-radius: 6px; border: 1px dashed #ccc; margin: 15px 0;">
-                <img src="system-map.png" alt="システム構成図" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">         
+                <img src="system-map.png" alt="システム構成図" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">          
             </div>
         </section>
 
@@ -114,12 +72,13 @@
         <p style="font-size: 0.9em; color: #d32f2f;">※バージョン1.115V以前のGX Works3を使用した場合は、動作保証がございません。</p>
         </section>
 
-        
     </main>
 
     <footer style="text-align: center; padding: 20px; color: #888; font-size: 11px; background-color: #eeedeb; margin-top: 50px;">
         <p>© 2026 Ryota - Industrial Automation Lab. All Rights Reserved.</p>
     </footer>
+
+    <script src="https://chigkirta-oss.github.io/ur20-general/shared-header.js"></script>
 
 </body>
 </html>

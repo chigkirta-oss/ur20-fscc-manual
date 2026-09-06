@@ -796,7 +796,150 @@
                 </tr>
             </tbody>
         </table>
+
+        <p>つづきその２</p>
             
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 13px; line-height: 1.5;">
+            <thead>
+                <tr style="background-color: #333; color: #fff;">
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 30%;" colspan="2" rowspan="2">項目</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 35%;" rowspan="2">内容</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 20%;" rowspan="2">設定範囲</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; width: 15%;" colspan="2">設定可否</th>
+                </tr>
+                <tr style="background-color: #333; color: #fff;">
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; font-size: 11px;">UR20-8DI-PN-FSCC</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; font-size: 11px;">UR20-4DI-4DO-PN-FSCC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Parameter Setting (全8行分結合) -->
+                <!-- Ch 4: Test pulse -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; width: 12%;" rowspan="8">Parameter Setting</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; width: 18%;">Ch 4: Test pulse</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;" rowspan="4">
+                        - UR20-8DI-PN-FSCC<br>
+                        各チャンネルの入力ダークテストのテストパルス出力元を設定します。<br>
+                        - internal: 内部回路の入力ダークテストを実施します。<br>
+                        - external: 入力ダークテストを実施しません。<br>
+                        - from AUX0: AUX0 の端子からテストパルスを出力します。<br>
+                        - UR20-4DI-4DO-PN-FSCC<br>
+                        各チャンネルの出力ダークテストを実施するかどうかを設定します。<br>
+                        - enabled: 出力ダークテストを実施する<br>
+                        - disabled: 出力ダークテストを実施しない
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        - UR20-8DI-PN-FSCC<br>
+                        - internal<br>
+                        - external<br>
+                        - from AUX4<br>
+                        - from AUX5<br>
+                        (*デフォルト: internal)<br>
+                        - UR20-4DI-4DO-PN-FSCC<br>
+                        - enabled<br>
+                        - disabled<br>
+                        (*デフォルト: enabled)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch 5: Test pulse -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 5: Test pulse</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        - UR20-8DI-PN-FSCC<br>
+                        - internal<br>
+                        - external<br>
+                        - from AUX5<br>
+                        (*デフォルト: internal)<br>
+                        - UR20-4DI-4DO-PN-FSCC<br>
+                        - enabled<br>
+                        - disabled<br>
+                        (*デフォルト: enabled)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch 6: Test pulse -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 6: Test pulse</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        - UR20-8DI-PN-FSCC<br>
+                        - internal<br>
+                        - external<br>
+                        - from AUX6<br>
+                        - from AUX7<br>
+                        (*デフォルト: internal)<br>
+                        - UR20-4DI-4DO-PN-FSCC<br>
+                        - enabled<br>
+                        - disabled<br>
+                        (*デフォルト: enabled)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch 7: Test pulse -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 7: Test pulse</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        - UR20-8DI-PN-FSCC<br>
+                        - internal<br>
+                        - external<br>
+                        - from AUX7<br>
+                        (*デフォルト: internal)<br>
+                        - UR20-4DI-4DO-PN-FSCC<br>
+                        - enabled<br>
+                        - disabled<br>
+                        (*デフォルト: enabled)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+        
+                <!-- Ch 4/5 などの不一致検出時間 -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 4: Output test pulse duration</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        DI0とDI1の二重化入力不一致時間を設定します。<br>
+                        "Ch 0/1: Input dual channel mode"で"single channel"を設定した場合、本設定は無視されます。
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;" rowspan="4">
+                        5～30000 (単位: ms)<br>
+                        (デフォルト: 500)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 5: Output test pulse duration</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        DI2とDI3の二重化入力不一致時間を設定します。<br>
+                        "Ch 2/3: Input dual channel mode"で"single channel"を設定した場合、本設定は無視されます。
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 4/5: Input dual channel mode</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        DI4とDI5の二重化入力不一致時間を設定します。<br>
+                        "Ch 4/5: Input dual channel mode"で"single channel"を設定した場合、本設定は無視されます。
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch4: Input polarity</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        DI6とDI7の二重化入力不一致時間を設定します。<br>
+                        "Ch 6/7: Input dual channel mode"で"single channel"を設定した場合、本設定は無視されます。
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+            </tbody>
+        </table>
             
         <section>
             <h2 style="margin-top: 0; color: #111; font-size: 18px;">作業中</h2>

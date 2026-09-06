@@ -345,19 +345,20 @@
             <thead>
                 <tr style="background-color: #333; color: #fff;">
                     <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 15%;" rowspan="2">項目</th>
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 35%;" rowspan="2">内容</th>
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 30%;" rowspan="2">設定範囲</th>
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; width: 20%;" colspan="2">設定可否</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 25%;" rowspan="2">項目名（詳細）</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 25%;" rowspan="2">内容</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 20%;" rowspan="2">設定範囲</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; width: 15%;" colspan="2">設定可否</th>
                 </tr>
                 <tr style="background-color: #333; color: #fff;">
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; width: 10%;">UR20-8DI-PN-FSCC</th>
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; width: 10%;">UR20-4DI-4DO-PN-FSCC</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">UR20-8DI-PN-FSCC</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">UR20-4DI-4DO-PN-FSCC</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Transmission interval -->
                 <tr style="background-color: #fff;">
-                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Transmission interval Monitoring time</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;" colspan="2">Transmission interval Monitoring time</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">安全データの送信間隔監視時間を設定(単位: ms)</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">27～1000 (*デフォルト: 80)</td>
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
@@ -365,14 +366,15 @@
                 </tr>
                 <!-- Safety authentication code -->
                 <tr style="background-color: #f9f9f9;">
-                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Safety authentication code</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;" colspan="2">Safety authentication code</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">安全機能付きI/Oユニットの個体を識別する安全認証コードを設定</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">0x00000000～0xFFFFFFFF<br>(デフォルト: 0xFFFFFFFF)</td>
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                 </tr>
         
-                <!-- Parameter setting: Ch0/Ch1 delay -->
+                <!-- Parameter setting (12行分結合) -->
+                <!-- Ch0/1 Input delay -->
                 <tr style="background-color: #fff;">
                     <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;" rowspan="12">Parameter setting</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">

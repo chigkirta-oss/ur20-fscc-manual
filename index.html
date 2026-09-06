@@ -92,6 +92,23 @@
             <img src="sub-id-range.png" alt="サブID設定範囲" style="max-width: 100%; height: auto;">
             </div>
         </div>
+
+        <ul style="list-style-type: none; padding-left: 0; margin-top: 15px; font-size: 14px; line-height: 1.6;">
+            <li style="position: relative; padding-left: 1.2em; margin-bottom: 8px;">
+                <span style="position: absolute; left: 0;">├</span>
+                サブ ID は，UR20-FBC-CC-TSN のネットワーク構成設定の“増設ユニット構成”画面からも確認ができます。
+            </li>
+            <li style="position: relative; padding-left: 1.2em; margin-bottom: 8px;">
+                <span style="position: absolute; left: 0;">-</span>
+                DIP スイッチで設定したサブ ID と“増設ユニット構成”画面で表示されているサブ ID が異なる場合，安全制御が開始されません。<br>
+                “増設ユニット構成”画面で増設ユニットを登録する際は，ユニットの装着順と同じ順番でユニットを登録し，DIP スイッチとサブ ID が一致するようにしてください。
+            </li>
+            <li style="position: relative; padding-left: 1.2em; margin-bottom: 8px;">
+                <span style="position: absolute; left: 0;">-</span>
+                DIP スイッチで設定するサブ ID を 64 以上に設定した場合，または電源 ON 中に DIP スイッチを変更した場合はエラー(エラーコード: 0107H)が発生します。
+            </li>
+        </ul>
+        
         </section>
 
         <section>

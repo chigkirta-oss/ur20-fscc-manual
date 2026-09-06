@@ -339,7 +339,263 @@
             <p style="margin: 0 0 10px 0;"></p>
             <p style="margin: 0 0 10px 0;">2. ”増設ユニット構成”画面を開きます。</p>
             <p style="margin: 0;">”CC-Link IE TSN構成”画面→UR20-FBC-CC-TSNのアイコンを右クリック→[システム構成を開く]→[増設ユニット構成を開く]</p>
+
+
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 13px; line-height: 1.5;">
+            <thead>
+                <tr style="background-color: #333; color: #fff;">
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 15%;" rowspan="2">項目</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 35%;" rowspan="2">内容</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 30%;" rowspan="2">設定範囲</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; width: 20%;" colspan="2">設定可否</th>
+                </tr>
+                <tr style="background-color: #333; color: #fff;">
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; width: 10%;">UR20-8DI-PN-FSCC</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; width: 10%;">UR20-4DI-4DO-PN-FSCC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Transmission interval -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Transmission interval Monitoring time</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">安全データの送信間隔監視時間を設定(単位: ms)</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">27～1000 (*デフォルト: 80)</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Safety authentication code -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Safety authentication code</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">安全機能付きI/Oユニットの個体を識別する安全認証コードを設定</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">0x00000000～0xFFFFFFFF<br>(デフォルト: 0xFFFFFFFF)</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
         
+                <!-- Parameter setting: Ch0/Ch1 delay -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;" rowspan="12">Parameter setting</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        Ch0: Input delay<br>
+                        Ch1: Input delay
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        入力DI0の入力応答時間を設定<br>
+                        入力DI1の入力応答時間を設定
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -1 ms (0)<br>
+                        -3 ms (1)<br>
+                        -10 ms (2)<br>
+                        -100 ms (3)<br>
+                        *デフォルト: 1ms
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○<br>○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○<br>○</td>
+                </tr>
+                <!-- Ch 0/1: mode -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 0/1: Input dual channel mode</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        入力DI0と入力DI1の入力の配線方法を設定<br>
+                        -single channel: 単一配線<br>
+                        -dual channel equivalent: 二重化配線(NC/NC)<br>
+                        -dual channel antivalent: 二重化配線(NC/NO)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -single channel (0)<br>
+                        -dualchannel equivalent (1)<br>
+                        -dual channel antivalent (2)<br>
+                        *デフォルト: single channel
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch0: polarity -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch0: Input polarity</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        入力DI0の入力端子の極性を設定します。<br>
+                        -P-switching: マイナスコモン<br>
+                        -N-switching: プラスコモン
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -P-switching (0)<br>
+                        -N-switching (1)<br>
+                        *デフォルト: P-switching
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+        
+                <!-- Ch2/Ch3 delay -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        Ch2: Input delay<br>
+                        Ch3: Input delay
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        入力DI0の入力応答時間を設定<br>
+                        入力DI1の入力応答時間を設定
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -1 ms (0)<br>
+                        -3 ms (1)<br>
+                        -10 ms (2)<br>
+                        -100 ms (3)<br>
+                        *デフォルト: 1ms
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○<br>○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○<br>○</td>
+                </tr>
+                <!-- Ch 2/3: mode -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 2/3: Input dual channel mode</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        入力DI0と入力DI1の入力の配線方法を設定<br>
+                        -single channel: 単一配線<br>
+                        -dual channel equivalent: 二重化配線(NC/NC)<br>
+                        -dual channel antivalent: 二重化配線(NC/NO)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -single channel (0)<br>
+                        -dualchannel equivalent (1)<br>
+                        -dual channel antivalent (2)<br>
+                        *デフォルト: single channel
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch2: polarity -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch2: Input polarity</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        入力DI0の入力端子の極性を設定します。<br>
+                        -P-switching: マイナスコモン<br>
+                        -N-switching: プラスコモン
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -P-switching (0)<br>
+                        -N-switching (1)<br>
+                        *デフォルト: P-switching
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+        
+                <!-- Ch4/Ch5 delay -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        Ch4: Input delay<br>
+                        Ch5: Input delay
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        入力DI0の入力応答時間を設定<br>
+                        入力DI1の入力応答時間を設定
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -1 ms (0)<br>
+                        -3 ms (1)<br>
+                        -10 ms (2)<br>
+                        -100 ms (3)<br>
+                        *デフォルト: 1ms
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○<br>○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×<br>×</td>
+                </tr>
+                <!-- Ch 4/5: mode -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 4/5: Input dual channel mode</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        入力DI0と入力DI1の入力の配線方法を設定<br>
+                        -single channel: 単一配線<br>
+                        -dual channel equivalent: 二重化配線(NC/NC)<br>
+                        -dual channel antivalent: 二重化配線(NC/NO)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -single channel (0)<br>
+                        -dualchannel equivalent (1)<br>
+                        -dual channel antivalent (2)<br>
+                        *デフォルト: single channel
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                </tr>
+                <!-- Ch4: polarity -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch4: Input polarity</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        入力DI0の入力端子の極性を設定します。<br>
+                        -P-switching: マイナスコモン<br>
+                        -N-switching: プラスコモン
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -P-switching (0)<br>
+                        -N-switching (1)<br>
+                        *デフォルト: P-switching
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                </tr>
+        
+                <!-- Ch6/Ch7 delay -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        Ch6: Input delay<br>
+                        Ch7: Input delay
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        入力DI0の入力応答時間を設定<br>
+                        入力DI1の入力応答時間を設定
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -1 ms (0)<br>
+                        -3 ms (1)<br>
+                        -10 ms (2)<br>
+                        -100 ms (3)<br>
+                        *デフォルト: 1ms
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○<br>○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×<br>×</td>
+                </tr>
+                <!-- Ch 6/7: mode -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 6/7: Input dual channel mode</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        入力DI0と入力DI1の入力の配線方法を設定<br>
+                        -single channel: 単一配線<br>
+                        -dual channel equivalent: 二重化配線(NC/NC)<br>
+                        -dual channel antivalent: 二重化配線(NC/NO)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -single channel (0)<br>
+                        -dualchannel equivalent (1)<br>
+                        -dual channel antivalent (2)<br>
+                        *デフォルト: single channel
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                </tr>
+                <!-- Ch6: polarity -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch6: Input polarity</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        入力DI0の入力端子の極性を設定します。<br>
+                        -P-switching: マイナスコモン<br>
+                        -N-switching: プラスコモン
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -P-switching (0)<br>
+                        -N-switching (1)<br>
+                        *デフォルト: P-switching
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                </tr>
+            </tbody>
+        </table>
+
+            
         <section>
             <h2 style="margin-top: 0; color: #111; font-size: 18px;">作業中</h2>
             <p>以下追記予定・・・</p>

@@ -600,6 +600,201 @@
             </tbody>
         </table>
 
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 13px; line-height: 1.5;">
+            <thead>
+                <tr style="background-color: #333; color: #fff;">
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 30%;" colspan="2" rowspan="2">項目</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 35%;" rowspan="2">内容</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 20%;" rowspan="2">設定範囲</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; width: 15%;" colspan="2">設定可否</th>
+                </tr>
+                <tr style="background-color: #333; color: #fff;">
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; font-size: 11px;">UR20-8DI-PN-FSCC</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; font-size: 11px;">UR20-4DI-4DO-PN-FSCC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Parameter setting (全10行分結合) -->
+                <!-- Ch 0: Test pulse -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; width: 12%;" rowspan="10">Parameter setting</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; width: 18%;">Ch 0: Test pulse</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;" rowspan="4">
+                        各チャンネルの入力ダークテストのテストパルス出力元を設定します。<br>
+                        -internal: 内部回路の入力ダークテストを実施<br>
+                        -external: 入力ダークテストを実施しません。<br>
+                        -from AUX-: AUX- の端子からテストパルスを出力します。
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -internal (0)<br>
+                        -external (1)<br>
+                        -from AUX0 (2)<br>
+                        -from AUX1 (3)<br>
+                        (*デフォルト: internal)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch 1: Test pulse -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 1: Test pulse</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -internal (0)<br>
+                        -external (1)<br>
+                        -from AUX1 (2)<br>
+                        (*デフォルト: internal)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch 2: Test pulse -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 2: Test pulse</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -internal (0)<br>
+                        -external (1)<br>
+                        -from AUX2 (2)<br>
+                        -from AUX3 (3)<br>
+                        (*デフォルト: internal)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch 3: Test pulse -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 3: Test pulse</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -internal (0)<br>
+                        -external (1)<br>
+                        -from AUX3 (2)<br>
+                        (*デフォルト: internal)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+        
+                <!-- Ch 4: Output test pulse duration -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 4: Output test pulse duration</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        出力DO0の出力ダークテストで使用するパルスのOFF時間を設定します。<br>
+                        "Ch 4: Test pulse"で"disabled"を設定した場合、本設定は無視されます。
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;" rowspan="2">
+                        -0.5 ms (0)<br>
+                        -1 ms (1)<br>
+                        -3 ms (2)<br>
+                        -10 ms (3)<br>
+                        *デフォルト: 0.5ms
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch 5: Output test pulse duration -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 5: Output test pulse duration</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        出力DO1の出力ダークテストで使用するパルスのOFF時間を設定します。<br>
+                        "Ch 5: Test pulse"で"disabled"を設定した場合、本設定は無視されます。
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch 4/5: Input dual channel mode -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 4/5: Input dual channel mode</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        出力DO0と出力DO1の出力の配線方法を設定します。<br>
+                        -single channel: 単一配線<br>
+                        -dual channel: 二重化配線
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -single channel (0)<br>
+                        -dual channel (1)<br>
+                        (デフォルト: single channel)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch4: Input polarity -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch4: Input polarity</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        出力DO0の出力端子の極性を設定します。<br>
+                        -P-switching: ソース出力<br>
+                        -N-switching: シンク出力
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -P-switching (0)<br>
+                        -N-switching (1)<br>
+                        *デフォルト: P-switching
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+        
+                <!-- Ch 6: Output test pulse duration -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 6: Output test pulse duration</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        出力DO2の出力ダークテストで使用するパルスのOFF時間を設定します。<br>
+                        "Ch 6: Test pulse"で"disabled"を設定した場合、本設定は無視されます。
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;" rowspan="2">
+                        -0.5 ms (0)<br>
+                        -1 ms (1)<br>
+                        -3 ms (2)<br>
+                        -10 ms (3)<br>
+                        *デフォルト: 0.5ms
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch 7: Output test pulse duration -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 7: Output test pulse duration</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        出力DO3の出力ダークテストで使用するパルスのOFF時間を設定します。<br>
+                        "Ch 7: Test pulse"で"disabled"を設定した場合、本設定は無視されます。
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch 6/7: Input dual channel mode -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch 6/7: Input dual channel mode</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        出力DO2と出力DO3の出力の配線方法を設定します。<br>
+                        -single channel: 単一配線<br>
+                        -dual channel: 二重化配線
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -single channel (0)<br>
+                        -dual channel (1)<br>
+                        (デフォルト: single channel)
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch6: Input polarity -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch6: Input polarity</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        出力DO2の出力端子の極性を設定します。<br>
+                        -P-switching: ソース出力<br>
+                        -N-switching: シンク出力
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        -P-switching (0)<br>
+                        -N-switching (1)<br>
+                        *デフォルト: P-switching
+                    </td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+            </tbody>
+        </table>
+            
             
         <section>
             <h2 style="margin-top: 0; color: #111; font-size: 18px;">作業中</h2>

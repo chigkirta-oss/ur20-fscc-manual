@@ -344,15 +344,14 @@
         <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 13px; line-height: 1.5;">
             <thead>
                 <tr style="background-color: #333; color: #fff;">
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 15%;" rowspan="2">項目</th>
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 25%;" rowspan="2">項目名（詳細）</th>
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 25%;" rowspan="2">内容</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 30%;" colspan="2" rowspan="2">項目</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 35%;" rowspan="2">内容</th>
                     <th style="padding: 8px; border: 1px solid #ddd; text-align: left; width: 20%;" rowspan="2">設定範囲</th>
                     <th style="padding: 8px; border: 1px solid #ddd; text-align: center; width: 15%;" colspan="2">設定可否</th>
                 </tr>
                 <tr style="background-color: #333; color: #fff;">
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">UR20-8DI-PN-FSCC</th>
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">UR20-4DI-4DO-PN-FSCC</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; font-size: 11px;">UR20-8DI-PN-FSCC</th>
+                    <th style="padding: 8px; border: 1px solid #ddd; text-align: center; font-size: 11px;">UR20-4DI-4DO-PN-FSCC</th>
                 </tr>
             </thead>
             <tbody>
@@ -373,29 +372,30 @@
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                 </tr>
         
-                <!-- Parameter setting (12行分結合) -->
-                <!-- Ch0/1 Input delay -->
+                <!-- Parameter setting (全16行分結合) -->
+                <!-- Ch0 -->
                 <tr style="background-color: #fff;">
-                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;" rowspan="12">Parameter setting</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">
-                        Ch0: Input delay<br>
-                        Ch1: Input delay
-                    </td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">
-                        入力DI0の入力応答時間を設定<br>
-                        入力DI1の入力応答時間を設定
-                    </td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; width: 12%;" rowspan="16">Parameter setting</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; width: 18%;">Ch0: Input delay</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">入力DI0の入力応答時間を設定</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;" rowspan="2">
                         -1 ms (0)<br>
                         -3 ms (1)<br>
                         -10 ms (2)<br>
                         -100 ms (3)<br>
                         *デフォルト: 1ms
                     </td>
-                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○<br>○</td>
-                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○<br>○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                 </tr>
-                <!-- Ch 0/1: mode -->
+                <!-- Ch1 -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch1: Input delay</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">入力DI1の入力応答時間を設定</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch 0/1 mode -->
                 <tr style="background-color: #f9f9f9;">
                     <td style="padding: 8px; border: 1px solid #ddd;">Ch 0/1: Input dual channel mode</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">
@@ -413,7 +413,7 @@
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                 </tr>
-                <!-- Ch0: polarity -->
+                <!-- Ch0 polarity -->
                 <tr style="background-color: #fff;">
                     <td style="padding: 8px; border: 1px solid #ddd;">Ch0: Input polarity</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">
@@ -430,27 +430,28 @@
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                 </tr>
         
-                <!-- Ch2/Ch3 delay -->
+                <!-- Ch2 -->
                 <tr style="background-color: #f9f9f9;">
-                    <td style="padding: 8px; border: 1px solid #ddd;">
-                        Ch2: Input delay<br>
-                        Ch3: Input delay
-                    </td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">
-                        入力DI0の入力応答時間を設定<br>
-                        入力DI1の入力応答時間を設定
-                    </td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch2: Input delay</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">入力DI0の入力応答時間を設定</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;" rowspan="2">
                         -1 ms (0)<br>
                         -3 ms (1)<br>
                         -10 ms (2)<br>
                         -100 ms (3)<br>
                         *デフォルト: 1ms
                     </td>
-                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○<br>○</td>
-                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○<br>○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                 </tr>
-                <!-- Ch 2/3: mode -->
+                <!-- Ch3 -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch3: Input delay</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">入力DI1の入力応答時間を設定</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                </tr>
+                <!-- Ch 2/3 mode -->
                 <tr style="background-color: #fff;">
                     <td style="padding: 8px; border: 1px solid #ddd;">Ch 2/3: Input dual channel mode</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">
@@ -468,7 +469,7 @@
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                 </tr>
-                <!-- Ch2: polarity -->
+                <!-- Ch2 polarity -->
                 <tr style="background-color: #f9f9f9;">
                     <td style="padding: 8px; border: 1px solid #ddd;">Ch2: Input polarity</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">
@@ -485,27 +486,28 @@
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                 </tr>
         
-                <!-- Ch4/Ch5 delay -->
+                <!-- Ch4 -->
                 <tr style="background-color: #fff;">
-                    <td style="padding: 8px; border: 1px solid #ddd;">
-                        Ch4: Input delay<br>
-                        Ch5: Input delay
-                    </td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">
-                        入力DI0の入力応答時間を設定<br>
-                        入力DI1の入力応答時間を設定
-                    </td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch4: Input delay</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">入力DI0の入力応答時間を設定</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;" rowspan="2">
                         -1 ms (0)<br>
                         -3 ms (1)<br>
                         -10 ms (2)<br>
                         -100 ms (3)<br>
                         *デフォルト: 1ms
                     </td>
-                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○<br>○</td>
-                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×<br>×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
                 </tr>
-                <!-- Ch 4/5: mode -->
+                <!-- Ch5 -->
+                <tr style="background-color: #fff;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch5: Input delay</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">入力DI1の入力応答時間を設定</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                </tr>
+                <!-- Ch 4/5 mode -->
                 <tr style="background-color: #f9f9f9;">
                     <td style="padding: 8px; border: 1px solid #ddd;">Ch 4/5: Input dual channel mode</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">
@@ -523,7 +525,7 @@
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
                 </tr>
-                <!-- Ch4: polarity -->
+                <!-- Ch4 polarity -->
                 <tr style="background-color: #fff;">
                     <td style="padding: 8px; border: 1px solid #ddd;">Ch4: Input polarity</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">
@@ -540,27 +542,28 @@
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
                 </tr>
         
-                <!-- Ch6/Ch7 delay -->
+                <!-- Ch6 -->
                 <tr style="background-color: #f9f9f9;">
-                    <td style="padding: 8px; border: 1px solid #ddd;">
-                        Ch6: Input delay<br>
-                        Ch7: Input delay
-                    </td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">
-                        入力DI0の入力応答時間を設定<br>
-                        入力DI1の入力応答時間を設定
-                    </td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch6: Input delay</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">入力DI0の入力応答時間を設定</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;" rowspan="2">
                         -1 ms (0)<br>
                         -3 ms (1)<br>
                         -10 ms (2)<br>
                         -100 ms (3)<br>
                         *デフォルト: 1ms
                     </td>
-                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○<br>○</td>
-                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×<br>×</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
                 </tr>
-                <!-- Ch 6/7: mode -->
+                <!-- Ch7 -->
+                <tr style="background-color: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Ch7: Input delay</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">入力DI1の入力応答時間を設定</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
+                </tr>
+                <!-- Ch 6/7 mode -->
                 <tr style="background-color: #fff;">
                     <td style="padding: 8px; border: 1px solid #ddd;">Ch 6/7: Input dual channel mode</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">
@@ -578,7 +581,7 @@
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">○</td>
                     <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">×</td>
                 </tr>
-                <!-- Ch6: polarity -->
+                <!-- Ch6 polarity -->
                 <tr style="background-color: #f9f9f9;">
                     <td style="padding: 8px; border: 1px solid #ddd;">Ch6: Input polarity</td>
                     <td style="padding: 8px; border: 1px solid #ddd;">

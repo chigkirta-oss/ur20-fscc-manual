@@ -968,8 +968,7 @@
         <section>
                 <h3 style="font-size: 16px;">4.2.2 設定パラメータ：Input delay (singleおよびdual channel mode) について</h3>
                     <p>一般に、非常停止スイッチが操作される際、スイッチ内の接点がしばらくバウンスすることが想定されます。</p>
-                    <p>この対策として、パラメータを使用して、論理信号が論理状態を真に変更する前に待機する時間を設定できます。</p>
-                    <p>遅延の最小時間は、入力信号が安定するまでにかかる時間によって異なります。</p>
+                    <p>この対策として、パラメータを使用して、論理信号が論理状態を真に変更する前に待機する時間を設定できます。遅延の最小時間は、入力信号が安定するまでにかかる時間によって異なります。</p>
                 <div style="margin-bottom:30px;">
                     <img src="4.2.2.png"
                          alt="グラフ1"
@@ -977,9 +976,34 @@
                 </div>
         </section>
         
+        <!-- 4.2.3箇所 -->
+        <section>
+                <h3 style="font-size: 16px;">4.2.3 設定パラメータ：Discrepancy time (dual channel モードのみ) について</h3>
+                    <p>関連するチャネルの一方で有効な信号変化が検出された後、モジュールは設定された不一致時間内に他方のチャネルでの信号変化を期待します。信号変化が欠落するか遅延すると、不一致エラーが発生します。</p>
+                <div style="margin-bottom:30px;">
+                    <img src="4.2.2.png"
+                         alt="グラフ1"
+                         style="max-width:50%; height:auto; display:block;">
+                </div>
+        </section>            
+
+        <!-- 4.2.4箇所 -->
+        <section>
+                <h3 style="font-size: 16px;">4.2.4 設定パラメータ：Equivalent (dual channel モードのみ) について</h3>
+                    <p>接続された両方のスイッチング素子は同じタイプ（NO+NO または NC+NC）であり、これにより一方のチャンネルでの信号変化が他方のチャンネルに対して等価になります。</p>
+        </section>         
+
+        <!-- 4.2.5箇所 -->
+        <section>
+                <h3 style="font-size: 16px;">4.2.5 設定パラメータ：Antivalent (dual channel モードのみ) について</h3>
+                    <p>接続されたスイッチング素子は常に異なるタイプ（NO+NC）であり、これにより一方のチャンネルでの信号変化が他方のチャンネルに対して逆相になります。</p>
+        </section>      
+
+        <h3 style="font-size: 16px;">4.1 安全機能付きI/Oユニットのパラメータ設定</h3>
+                    <p>マスタ局と安全機能付きI/Oユニットとの間で安全通信を行うための設定をします。</p>
+
             
-            
-            
+        
     </main>
 
     <footer style="text-align: center; padding: 20px; color: #888; font-size: 11px; background-color: #eeedeb; margin-top: 50px;">
